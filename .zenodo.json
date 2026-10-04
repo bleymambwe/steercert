@@ -1,0 +1,17 @@
+{
+  "title": "steercert: sensor/actuator audits for language-model probes and steering vectors",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Mambwe, Blessings"
+    }
+  ],
+  "keywords": [
+    "interpretability",
+    "activation steering",
+    "linear probes",
+    "AI safety",
+    "language models"
+  ]
+}

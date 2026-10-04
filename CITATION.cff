@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use steercert, please cite it using these metadata."
+title: "steercert: sensor/actuator audits for language-model probes and steering vectors"
+abstract: >-
+  steercert measures whether the direction a linear probe reads in a language
+  model's activations also controls the behaviour it detects, using per-example
+  behavioural gradients and the effect Gramian, with reporting rules,
+  construction-matched controls, held-out validation and integrations with
+  steering and interpretability libraries.
+type: software
+authors:
+  - family-names: Mambwe
+    given-names: Blessings
+    email: bleymambwe@gmail.com
+    # orcid: "https://orcid.org/0000-0000-0000-0000"   # TODO: add before release
+repository-code: "https://github.com/bleymambwe/steercert"
+url: "https://bleymambwe.github.io/steercert"
+license: MIT
+version: 0.1.0
+date-released: "2026-10-04"
+keywords:
+  - interpretability
+  - activation steering
+  - linear probes
+  - AI safety
+  - language models

@@ -1,0 +1,62 @@
+site_name: steercert
+site_description: Sensor/actuator audits for language-model probes and steering vectors
+site_url: https://bleymambwe.github.io/steercert/
+repo_url: https://github.com/bleymambwe/steercert
+repo_name: bleymambwe/steercert
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle: { icon: material/weather-night, name: Dark mode }
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle: { icon: material/weather-sunny, name: Light mode }
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc: { permalink: true }
+  - pymdownx.arithmatex: { generic: true }
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.snippets: { base_path: ["."], check_paths: true }
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+          options:
+            docstring_style: numpy
+            show_source: false
+            members_order: source
+            heading_level: 2
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Quick start: quickstart.md
+  - Concepts: concepts.md
+  - Findings and reporting rules: findings.md
+  - Integrations: integrations.md
+  - Diffusion language models: diffusion.md
+  - CI regression checks: cli.md
+  - Validation: validation.md
+  - API reference:
+      - steercert (audit): api/audit.md
+      - Geometry: api/geometry.md
+      - Probes, controls, statistics: api/probes.md
+      - Hugging Face adapter: api/hf.md
+      - Integrations: api/integrations.md
+      - Two-clock analysis: api/two_clock.md
+  - Contributing: contributing.md
